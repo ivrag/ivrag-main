@@ -1,0 +1,56 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.cs-nav-link {
+    color: #696969 !important;
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+.cs-nav-link:hover {
+    font-weight: bold;
+}
+
+.cs-nav-link-active {
+    color: #4169e1 !important;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+.cs-nav-link-active:hover {
+    color: #21377a !important;
+}
+
+.cs-to-start {
+    font-size: 2em;
+}
+
+footer {
+    font-size: .8em;
+    background-color: #eeeeee;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 780px) {
+    header {
+        font-size: .9em;
+    }
+    footer {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: .9rem;
+    }
+    nav {
+        font-size: .9rem;
+        text-align: center;
+    }
+    nav a {
+        white-space: nowrap;
+    }
+}

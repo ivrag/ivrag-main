@@ -1,0 +1,31 @@
+{
+  "name": "ivrag-main",
+  "version": "1.0.0",
+  "description": "Main company website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivrag/ivrag-main.git"
+  },
+  "keywords": [
+    "Immobilien",
+    "Von",
+    "Rehetobel",
+    "AG",
+    "ivrag",
+    "IVRAG"
+  ],
+  "author": "Immobilien Von Rehetobel AG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivrag/ivrag-main/issues"
+  },
+  "homepage": "https://github.com/ivrag/ivrag-main#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
+  }
+}
