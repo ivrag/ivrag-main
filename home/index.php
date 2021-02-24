@@ -35,7 +35,7 @@
     <main class="container mt-5">
         <div class="mb-5">
             <h2>Home</h2>
-            <h5>Möblierte Ferienwohnungen für Freizeit und Busines</h5>
+            <h5>Möblierte Ferienwohnungen für Freizeit und Business</h5>
         </div>
         <div class="row">
             <div class="col-md-6 pt-2">
