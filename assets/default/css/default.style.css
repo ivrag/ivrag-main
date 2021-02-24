@@ -33,6 +33,15 @@ footer {
     padding-bottom: 15px;
 }
 
+.cs-foot-link {
+    font-weight: bold;
+    color: #19358a;
+    text-decoration: none !important;
+}
+.cs-foot-link:hover {
+    color:#4169e1;
+}
+
 @media (max-width: 780px) {
     header {
         font-size: .9em;

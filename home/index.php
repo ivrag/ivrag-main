@@ -1,5 +1,5 @@
 <?php
-    require '../../assets/view/Header.php';
+    require '../assets/view/Header.php';
     $cd = basename($_SERVER['REQUEST_URI']);
 ?>
 
@@ -13,19 +13,19 @@
     <meta name="author" content="Immobilien Von Rehetobel AG">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../../lib/favicon/favicon.svg" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="../lib/favicon/favicon.svg" sizes="any">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="../../lib/icns/css/icons.css">
+    <link rel="stylesheet" href="../lib/icns/css/icons.css">
 
     <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Default -->
-    <link rel="stylesheet" href="../../assets/default/css/default.style.css">
+    <link rel="stylesheet" href="../assets/default/css/default.style.css">
 
     <title>Home &bull; Immobilien Von Rehetobel AG</title>
 </head>
@@ -34,7 +34,7 @@
 
     <main class="container mt-5">
         <div class="mb-5">
-            <h2>Willkommen bei Wohnung 28</h2>
+            <h2>Home</h2>
             <h5>Möblierte Ferienwohnungen für Freizeit und Business</h5>
         </div>
         <div class="row">
@@ -78,7 +78,7 @@
                 <p>Gerne präsentieren wir Ihnen die neu eingerichtete 4.5 Zimmer Ferienwohnung, die in einem klassisch modernen Stil eingerichtet wurde und nun bereit ist Gäste zu empfangen.</p>
             </div>
             <div class="col-md-6 pt-2">
-                <img src="../../lib/images/placeholder/placeholder.svg" class="d-block w-100" alt="...">
+                <img src="../lib/images/placeholder/placeholder.svg" class="d-block w-100" alt="...">
             </div>
         </div>
     </main>
@@ -97,11 +97,10 @@
             <div class="col-4">
                 <h5>Navigation</h5>
                 <ul class="list-unstyled">
-                    <li>Home</li>
-                    <li>Wohnungen</li>
-                    <li>Reservation</li>
-                    <li>Über uns</li>
-                    <li>Kontakt</li>
+                    <li><a href="#" class="cs-foot-link">Home</a></li>
+                    <li><a href="#" class="cs-foot-link">Projekte</a></li>
+                    <li><a href="#" class="cs-foot-link">Über uns</a></li>
+                    <li><a href="#" class="cs-foot-link">Kontakt</a></li>
                 </ul>
             </div>
             <div class="col-4">
@@ -116,8 +115,8 @@
     </footer>
 
     <!-- JQuery -->
-    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
-    <script type="text/javascript" src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
