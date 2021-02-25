@@ -1,5 +1,6 @@
 <?php
     require '../../assets/view/Header.php';
+    require '../../assets/view/Footer.php';
     $cd = basename($_SERVER['REQUEST_URI']);
 ?>
 
@@ -30,7 +31,7 @@
     <title>Home &bull; Immobilien Von Rehetobel AG</title>
 </head>
 <body>
-    <?php new Header($cd); ?>
+    <?php new Header($cd) ?>
 
     <main class="container mt-5">
         <div class="mb-5">
@@ -83,37 +84,7 @@
         </div>
     </main>
 
-    <footer class="pt-4 pb-4 mt-5 pt-md-5 border-top mb-0 container">
-        <div class="row">
-            <div class="col-4">
-                <ul class="list-unstyled">
-                    <li><strong>Immobilien Von Rehetobel AG</strong></li>
-                    <li>Hauptstrasse 52</li>
-                    <li>8264 Eschenz</li>
-                    <li class="mt-2">+41 76 555 00 15</li>
-                    <li class="mt-2">info@ivrag.ch</li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h5>Navigation</h5>
-                <ul class="list-unstyled">
-                    <li>Home</li>
-                    <li>Wohnungen</li>
-                    <li>Reservation</li>
-                    <li>Über uns</li>
-                    <li>Kontakt</li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h5>Richtlinien</h5>
-                <ul class="list-unstyled">
-                    <li>Impressum</li>
-                    <li>Datenschutz</li>
-                    <li>AGBs</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <?php new Footer($cd) ?>
 
     <!-- JQuery -->
     <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
