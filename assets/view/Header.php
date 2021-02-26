@@ -53,7 +53,7 @@
             $this->actives['wohnung28'] = '';
             $this->actives['about'] = '';
             $this->actives['contact'] = '-active';
-        } elseif ($this->dir === 'impressum' || $this->dir === 'privacy' || $this->dir === 'agb') {
+        } elseif ($this->dir === 'impressum' || $this->dir === 'privacy') {
             $this->routes['home'] = '../home';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';

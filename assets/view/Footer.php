@@ -60,14 +60,6 @@
             $this->routes['impressum'] = '../impressum';
             $this->routes['privacy'] = '#';
             $this->routes['agb'] = '../agb';
-        } elseif ($this->dir === 'agb') {
-            $this->routes['home'] = '../home';
-            $this->routes['wohnung28'] = '../projects/wohnung28';
-            $this->routes['about'] = '../about';
-            $this->routes['contact'] = '../contact';
-            $this->routes['impressum'] = '../impressum';
-            $this->routes['privacy'] = '../privacy';
-            $this->routes['agb'] = '#';
         }
 
         $this->footer = '<footer class="pt-4 pb-4 mt-5 pt-md-5 border-top mb-0 container">
@@ -100,7 +92,6 @@
                                     <ul class="list-unstyled">
                                         <li><a href="' . $this->routes['impressum'] . '">Impressum</a></li>
                                         <li><a href="' . $this->routes['privacy'] . '">Datenschutz</a></li>
-                                        <li><a href="' . $this->routes['agb'] . '">AGBs</a></li>
                                     </ul>
                                 </div>
                             </div>
