@@ -28,7 +28,7 @@
     <!-- Default -->
     <link rel="stylesheet" href="../assets/default/css/default.style.css">
 
-    <title>Home &bull; Immobilien Von Rehetobel AG</title>
+    <title>Datenschutz &bull; Immobilien Von Rehetobel AG</title>
 </head>
 <body>
     <?php new Header($cd) ?>
