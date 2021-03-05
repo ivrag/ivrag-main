@@ -43,7 +43,7 @@
                 <div class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../../lib/images/drone/drone.png" class="d-block w-100" alt="...">
+                            <img src="../../lib/images/drone/drone.png" class="d-block w-100" alt="Überbauung Höfen aus der Vogelperspektive">
                         </div>
                     </div>
                 </div>
@@ -63,16 +63,24 @@
                         <li data-target="#wg-28-interval" data-slide-to="0" class="active"></li>
                         <li data-target="#wg-28-interval" data-slide-to="1"></li>
                         <li data-target="#wg-28-interval" data-slide-to="2"></li>
+                        <li data-target="#wg-28-interval" data-slide-to="3"></li>
+                        <li data-target="#wg-28-interval" data-slide-to="4"></li>
                     </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../../lib/images/flats/28/flat_1.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/28/flat_5.png" class="d-block w-100" alt="Wohnung 28 - Wohnzimmer">
                             </div>
                             <div class="carousel-item">
-                                <img src="../../lib/images/flats/28/flat_2.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/28/flat_7.png" class="d-block w-100" alt="Wohnung 28 - Balkon">
                             </div>
                             <div class="carousel-item">
-                                <img src="../../lib/images/flats/28/flat_3.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/28/flat_2.png" class="d-block w-100" alt="Wohnung 28 - Essbereich">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../lib/images/flats/28/flat_3.png" class="d-block w-100" alt="Wohnung 28 - Küche">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../lib/images/flats/28/flat_12.png" class="d-block w-100" alt="Wohnung 28 - Badezimmer">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#wg-28-interval" role="button" data-slide="prev">
@@ -107,19 +115,23 @@
                         <li data-target="#wg-29-interval" data-slide-to="1"></li>
                         <li data-target="#wg-29-interval" data-slide-to="2"></li>
                         <li data-target="#wg-29-interval" data-slide-to="3"></li>
+                        <li data-target="#wg-29-interval" data-slide-to="4"></li>
                     </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../../lib/images/flats/29/flat_10.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/29/flat_10.png" class="d-block w-100" alt="Wohnung 29 - Wohnzimmer">
                             </div>
                             <div class="carousel-item">
-                                <img src="../../lib/images/flats/29/flat_16.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/29/flat_5.png" class="d-block w-100" alt="Wohnung 29 - Balkon">
                             </div>
                             <div class="carousel-item">
-                                <img src="../../lib/images/flats/29/flat_18.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/29/flat_16.png" class="d-block w-100" alt="Wohnung 29 - Schlafzimmer mit Babybett">
                             </div>
                             <div class="carousel-item">
-                                <img src="../../lib/images/flats/29/flat_5.png" class="d-block w-100" alt="...">
+                                <img src="../../lib/images/flats/29/flat_18.png" class="d-block w-100" alt="Wohnung 29 - Schlafzimmer">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../lib/images/flats/29/flat_15.png" class="d-block w-100" alt="Wohnung 29 - Badezimmer">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#wg-29-interval" role="button" data-slide="prev">

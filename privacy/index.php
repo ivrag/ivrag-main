@@ -93,7 +93,9 @@
             <p>Weitere Angaben über Art, Umfang und Zweck der Datenbearbeitung finden sich in den <a href="https://safety.google/intl/de/principles/" target="_blank">Grundsätzen für Datenschutz und Sicherheit</a> und in der <a href="https://policies.google.com/privacy?hl=de" target="_blank">Datenschutzerklärung</a> jeweils von Google, im <a href="https://policies.google.com/technologies/product-privacy?hl=de" target="_blank">Leitfaden zum Datenschutz in Google-Produkten</a> (einschliesslich Google Analytics), in den <a href="https://policies.google.com/technologies/partner-sites?hl=de" target="_blank">Information, wie Google Daten von Websites verwendet, auf denen Google-Dienste genutzt werden</a> und in den <a href="https://policies.google.com/technologies/cookies?hl=de" target="_blank">Informationen über Cookies bei Google</a>. Ausserdem besteht die Möglichkeit, das <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">«Browser Add-on zur Deaktivierung von Google Analytics»</a> zu verwenden sowie <a href="https://adssettings.google.com/anonymous?sig=ACi0TCgOp9BT6M_rqrJ9xkxANmqMpc8NSr9FxhFcQ0PVZLVR1y9A7CfNvhyQjJoiRFjlEBw9Gi4WX60yej83l3nSPI6nGQvOGFhdB7iHlHXOIDcpPeOhAcE&amp;hl=de" target="_blank">Widerspruch gegen personalisierte Werbung</a> zu erheben.</p>
 
             <h5 class="mt-5">Schlussbestimmungen</h5>
-            <p>Wir können diese Datenschutzerklärung jederzeit anpassen und ergänzen. Wir werden über solche Anpassungen und Ergänzungen in geeigneter Form informieren, insbesondere durch Veröffentlichung der jeweils aktuellen Datenschutzerklärung auf unserer Website.</p>
+            <p class="mb-5">Wir können diese Datenschutzerklärung jederzeit anpassen und ergänzen. Wir werden über solche Anpassungen und Ergänzungen in geeigneter Form informieren, insbesondere durch Veröffentlichung der jeweils aktuellen Datenschutzerklärung auf unserer Website.</p>
+
+            <div class="text-right"><small><p>Immobilien Von Rehetobel AG, <i>März 2021</i></p></small></div>
         </div>
     </main>
 
