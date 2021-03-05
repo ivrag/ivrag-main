@@ -28,6 +28,8 @@
     <!-- Default -->
     <link rel="stylesheet" href="../assets/default/css/default.style.css">
 
+    <link rel="stylesheet" href="./css/style.css">
+
     <title>Kontakt &bull; Immobilien Von Rehetobel AG</title>
 </head>
 <body>
@@ -35,52 +37,75 @@
 
     <main class="container mt-5">
         <div class="mb-5">
-            <h2>Kontakt</h2>
-            <h5>Möblierte Ferienwohnungen für Freizeit und Business</h5>
-        </div>
-        <div class="row">
-            <div class="col-md-6 pt-2">
-                <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="https://www.wohnung28.ch/src/images/drone/md/drone_1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="https://www.wohnung28.ch/src/images/flat/md/flat_16.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="https://www.wohnung28.ch/src/images/drone/md/drone_1.jpg" class="d-block w-100" alt="...">
-                        </div>
+            <h3>Kontakt</h3>
+            <div class="card" style="width: 18rem;">
+                <img src="../lib/logo/logo-gray.svg" class="card-img-top" alt="Immobilien Von Rehetobel AG Logo">
+                <div class="card-body">
+                    <div class="card-text">
+                        <div><strong>Immobilien Von Rehetobel AG</strong></div>
+                        <div>Hauptstrasse 52</div>
+                        <div>8264 Eschenz</div>
+                        <div class="mt-1"><a href="tel:0041765550015">+41 76 555 00 15</a></div>
+                        <div class="mt-1"><a href="mailto:info@ivrag.ch">info@ivrag.ch</a></div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
-            </div>
-            <div class="col-md-6 pt-1">
-                <p>Die Wohnung 28 ist ein Projekt der Firma Immobilien Von Rehetobel AG welches von einem jungen Team betrieben wird. Das Konzept hinter dem Projekt ist es Möblierte Wohnungen für Familien und Geschäftsreisende zur Verfügung zu stellen.</p>
-                <p>Durch die modernen und stylischen Einrichtungen unserer Wohnungen wird eine angenehme Atmosphäre geschafft. Alle Einrichtungen wurden mit viel Liebe zum Detail designt. Neben den Einrichtungen gibt es verschiedene Raumaccessoires, die Ihren Aufenthalt noch angenehmer gestalten.</p>
-                <p>Mit dem Projekt Wohnung 28 möchten wir unseren Kunden einen unvergesslichen Aufenthalt bieten, den Sie nie wieder vergessen werden.</p>
-                <p>Die staunenden Blicke und positive Rückmeldungen unserer Gäste motivieren uns, aus diesem Projekt etwas einzigartiges zu erschaffen.</p>
             </div>
         </div>
 
-        <div class="mt-5 mb-3">
-            <h2>Frisch eingerichtete Wohnung</h2>
-            <h5>4.5 Zimmer Wohnung mit neuwertiger Möblierung</h5>
-        </div>
-        <div class="row">
-            <div class="col-md-6 pt-1">
-                <p>Gerne präsentieren wir Ihnen die neu eingerichtete 4.5 Zimmer Ferienwohnung, die in einem klassisch modernen Stil eingerichtet wurde und nun bereit ist Gäste zu empfangen.</p>
-            </div>
-            <div class="col-md-6 pt-2">
-                <img src="../lib/images/placeholder/placeholder.svg" class="d-block w-100" alt="...">
-            </div>
+        <div>
+            <h3>Kontaktformular</h3>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div>
+                            <label for="customer-title">Anrede</label>
+                            <select id="customer-title" class="form-control">
+                                <option value="">Anrede</option>
+                                <option value="Herr">Herr</option>
+                                <option value="Frau">Frau</option>
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <label for="customer-name">Name</label>
+                            <input id="customer-name" type="text" class="form-control" placeholder="Name*">
+                        </div>
+                        <div class="mt-3">
+                            <label for="customer-company">Firma</label>
+                            <input id="customer-company" type="text" class="form-control" placeholder="Firma (optional)">
+                        </div>
+                        <div class="mt-3">
+                            <label for="customer-address">Adresse</label>
+                            <input id="customer-address" type="text" class="form-control" placeholder="Adresse">
+                        </div>
+                        <div class="mt-3">
+                            <label for="customer-city">PLZ/Ort</label>
+                            <input id="customer-city" type="text" class="form-control" placeholder="PLZ/Ort">
+                        </div>
+                        <div class="mt-3">
+                            <label for="customer-email">E-Mail</label>
+                            <input id="customer-email" type="text" class="form-control" placeholder="E-Mail*">
+                        </div>
+                        <div class="mt-3">
+                            <label for="customer-phone">Telefon</label>
+                            <input id="customer-phone" type="text" class="form-control" placeholder="Telefon*">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div>
+                            <label for="customer-message">Mitteilung</label>
+                            <textarea id="customer-message" class="form-control"></textarea>
+                        </div>
+                        <div class="mt-3 pl-4">
+                            <input id="privacy-checkbox" type="checkbox" class="form-check-input">
+                            <label for="privacy-checkbox" class="form-check-label">Ich habe die <a href="../privacy" target="_blank" rel="noopener noreferrer nofollow">Datenschutzerklärung</a> gelesen und akzeptiere sie hiermit.</label>
+                        </div>
+                        <div class="mt-3">
+                            * Bitte füllen Sie die Pflichtfelder aus.
+                            <button id="form-submit-button" type="submit" class="btn btn-primary btn-md float-right">Senden!</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </main>
 
