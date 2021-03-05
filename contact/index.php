@@ -100,7 +100,7 @@
                             <label for="privacy-checkbox" class="form-check-label">Ich habe die <a href="../privacy" target="_blank" rel="noopener noreferrer nofollow">Datenschutzerklärung</a> gelesen und akzeptiere sie hiermit.</label>
                         </div>
                         <div class="mt-3">
-                            * Bitte füllen Sie die Pflichtfelder aus.
+                            * Bitte füllen Sie die Pflichtfelder aus
                             <button id="form-submit-button" type="submit" class="btn btn-primary btn-md float-right">Senden!</button>
                         </div>
                     </div>

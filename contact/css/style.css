@@ -1,3 +1,4 @@
 textarea.form-control {
+    resize: none;
     height: 554px !important;
 }
