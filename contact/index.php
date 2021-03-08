@@ -62,13 +62,13 @@
                                 <label for="customer-title">Anrede</label>
                                 <select id="customer-title" class="form-control">
                                     <option value="">Anrede</option>
-                                    <option value="Herr" selected>Herr</option>
+                                    <option value="Herr">Herr</option>
                                     <option value="Frau">Frau</option>
                                 </select>
                             </div>
                             <div class="mt-3">
                                 <label for="customer-name">Name <span class="text-danger font-weight-bold">*</span></label>
-                                <input id="customer-name" type="text" class="form-control" placeholder="Name*" value="Erwin Kast">
+                                <input id="customer-name" type="text" class="form-control" placeholder="Name*">
                             </div>
                             <div class="mt-3">
                                 <label for="customer-company">Firma</label>
@@ -76,26 +76,26 @@
                             </div>
                             <div class="mt-3">
                                 <label for="customer-address">Adresse</label>
-                                <input id="customer-address" type="text" class="form-control" placeholder="Adresse" value="Musterstrasse 12">
+                                <input id="customer-address" type="text" class="form-control" placeholder="Adresse">
                             </div>
                             <div class="mt-3">
                                 <label for="customer-city">PLZ/Ort</label>
-                                <input id="customer-city" type="text" class="form-control" placeholder="PLZ/Ort" value="8888 Muster">
+                                <input id="customer-city" type="text" class="form-control" placeholder="PLZ/Ort">
                             </div>
                             <div class="mt-3">
                                 <label for="customer-email">E-Mail <span class="text-danger font-weight-bold">*</span></label>
-                                <input id="customer-email" type="text" class="form-control" placeholder="E-Mail*" value="erwinkevinkast@gmail.com">
+                                <input id="customer-email" type="text" class="form-control" placeholder="E-Mail*">
                                 <div id="invalid-email-feedback" class="invalid-feedback"></div>
                             </div>
                             <div class="mt-3">
                                 <label for="customer-phone">Telefon <span class="text-danger font-weight-bold">*</span></label>
-                                <input id="customer-phone" type="text" class="form-control" placeholder="Telefon*" value="000 000 00 00">
+                                <input id="customer-phone" type="text" class="form-control" placeholder="Telefon*">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
                             <div>
                                 <label for="customer-message">Mitteilung <span class="text-danger font-weight-bold">*</span></label>
-                                <textarea id="customer-message" class="form-control" placeholder="Ihre Mitteilung an uns">Dies ist ein Test...</textarea>
+                                <textarea id="customer-message" class="form-control" placeholder="Ihre Mitteilung an uns ..."></textarea>
                             </div>
                             <div class="mt-3 pl-4">
                                 <input id="privacy-checkbox" type="checkbox" class="form-check-input">

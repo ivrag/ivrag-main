@@ -107,5 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+    if (!$rsp['status']) {
+        sleep(1);
+    }
+
     echo json_encode($rsp);
 }
