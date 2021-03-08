@@ -2,3 +2,7 @@ textarea.form-control {
     resize: none;
     height: 554px !important;
 }
+
+.send-success {
+    display: none;
+}

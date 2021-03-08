@@ -54,58 +54,66 @@
 
         <div>
             <h3>Kontaktformular</h3>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <div>
-                            <label for="customer-title">Anrede</label>
-                            <select id="customer-title" class="form-control">
-                                <option value="">Anrede</option>
-                                <option value="Herr">Herr</option>
-                                <option value="Frau">Frau</option>
-                            </select>
+            <div id="contact-form-wrapper">
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div>
+                                <label for="customer-title">Anrede</label>
+                                <select id="customer-title" class="form-control">
+                                    <option value="">Anrede</option>
+                                    <option value="Herr" selected>Herr</option>
+                                    <option value="Frau">Frau</option>
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <label for="customer-name">Name <span class="text-danger font-weight-bold">*</span></label>
+                                <input id="customer-name" type="text" class="form-control" placeholder="Name*" value="Erwin Kast">
+                            </div>
+                            <div class="mt-3">
+                                <label for="customer-company">Firma</label>
+                                <input id="customer-company" type="text" class="form-control" placeholder="Firma (optional)">
+                            </div>
+                            <div class="mt-3">
+                                <label for="customer-address">Adresse</label>
+                                <input id="customer-address" type="text" class="form-control" placeholder="Adresse" value="Musterstrasse 12">
+                            </div>
+                            <div class="mt-3">
+                                <label for="customer-city">PLZ/Ort</label>
+                                <input id="customer-city" type="text" class="form-control" placeholder="PLZ/Ort" value="8888 Muster">
+                            </div>
+                            <div class="mt-3">
+                                <label for="customer-email">E-Mail <span class="text-danger font-weight-bold">*</span></label>
+                                <input id="customer-email" type="text" class="form-control" placeholder="E-Mail*" value="erwinkevinkast@gmail.com">
+                                <div id="invalid-email-feedback" class="invalid-feedback"></div>
+                            </div>
+                            <div class="mt-3">
+                                <label for="customer-phone">Telefon <span class="text-danger font-weight-bold">*</span></label>
+                                <input id="customer-phone" type="text" class="form-control" placeholder="Telefon*" value="000 000 00 00">
+                            </div>
                         </div>
-                        <div class="mt-3">
-                            <label for="customer-name">Name</label>
-                            <input id="customer-name" type="text" class="form-control" placeholder="Name*">
-                        </div>
-                        <div class="mt-3">
-                            <label for="customer-company">Firma</label>
-                            <input id="customer-company" type="text" class="form-control" placeholder="Firma (optional)">
-                        </div>
-                        <div class="mt-3">
-                            <label for="customer-address">Adresse</label>
-                            <input id="customer-address" type="text" class="form-control" placeholder="Adresse">
-                        </div>
-                        <div class="mt-3">
-                            <label for="customer-city">PLZ/Ort</label>
-                            <input id="customer-city" type="text" class="form-control" placeholder="PLZ/Ort">
-                        </div>
-                        <div class="mt-3">
-                            <label for="customer-email">E-Mail</label>
-                            <input id="customer-email" type="text" class="form-control" placeholder="E-Mail*">
-                        </div>
-                        <div class="mt-3">
-                            <label for="customer-phone">Telefon</label>
-                            <input id="customer-phone" type="text" class="form-control" placeholder="Telefon*">
+                        <div class="form-group col-md-6">
+                            <div>
+                                <label for="customer-message">Mitteilung <span class="text-danger font-weight-bold">*</span></label>
+                                <textarea id="customer-message" class="form-control" placeholder="Ihre Mitteilung an uns">Dies ist ein Test...</textarea>
+                            </div>
+                            <div class="mt-3 pl-4">
+                                <input id="privacy-checkbox" type="checkbox" class="form-check-input">
+                                <label for="privacy-checkbox" class="form-check-label">Ich habe die <a href="../privacy" target="_blank" rel="noopener noreferrer nofollow">Datenschutzerklärung</a> gelesen und akzeptiere sie hiermit.</label>
+                            </div>
+                            <div class="mt-3">
+                                * Bitte füllen Sie die Pflichtfelder aus
+                                <button id="form-submit-button" type="submit" class="btn btn-primary btn-md float-right">Senden!</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <div>
-                            <label for="customer-message">Mitteilung</label>
-                            <textarea id="customer-message" class="form-control"></textarea>
-                        </div>
-                        <div class="mt-3 pl-4">
-                            <input id="privacy-checkbox" type="checkbox" class="form-check-input">
-                            <label for="privacy-checkbox" class="form-check-label">Ich habe die <a href="../privacy" target="_blank" rel="noopener noreferrer nofollow">Datenschutzerklärung</a> gelesen und akzeptiere sie hiermit.</label>
-                        </div>
-                        <div class="mt-3">
-                            * Bitte füllen Sie die Pflichtfelder aus
-                            <button id="form-submit-button" type="submit" class="btn btn-primary btn-md float-right">Senden!</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <div class="send-success">
+                <p class="text-success"><strong>Vielen Dank für Ihre Kontaktaufnahme !</strong></p>
+                <p>Das Formular hat uns erfolgreich erreicht.</p>
+                <p>Wir werden so rasch als Möglich mit Ihnen in Kontakt treten.</p>
+            </div>
         </div>
     </main>
 
@@ -115,5 +123,9 @@
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- xhr -->
+    <script src="../assets/js/xhr/xhr.min.js"></script>
+
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
