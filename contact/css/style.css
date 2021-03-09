@@ -6,3 +6,7 @@ textarea.form-control {
 .send-success {
     display: none;
 }
+
+.send-error {
+    display: none;
+}

@@ -11,6 +11,7 @@ const contactFormMessage = document.getElementById('customer-message');
 const contactFormPrivacy = document.getElementById('privacy-checkbox');
 const contactFormSubmitButton = document.getElementById('form-submit-button');
 const sendSuccess = document.querySelector('.send-success');
+const sendError = document.querySelector('.send-error');
 
 function contactFormSubmit(e) {
     e.preventDefault();
@@ -86,6 +87,11 @@ function contactFormSubmit(e) {
             }
             if (re.error === 'privacy') {
                 contactFormPrivacy.classList.add('is-invalid');
+            }
+            if (re.error === 'emailInternal') {
+                contactFormWrapper.style.display = 'none';
+                sendError.style.display = 'block';
+                contactForm.reset();
             }
         }
     }, data);

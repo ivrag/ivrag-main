@@ -114,6 +114,11 @@
                 <p>Das Formular hat uns erfolgreich erreicht.</p>
                 <p>Wir werden so rasch als Möglich mit Ihnen in Kontakt treten.</p>
             </div>
+            <div class="send-error">
+                <p class="text-danger">Senden Fehlgeschlagen</p>
+                <p>Leider konnte Ihr Formular aufgrund eines Fehlers nicht an uns gesandt werden.</p>
+                <p>Bitte versuchen Sie es nach einer Weile erneut oder kontaktieren Sie uns telefonisch unter <a href="tel:0041765550015">+41 76 555 00 15</a> oder per E-Mail über <a href="mailto:info@ivrag.ch">info@ivrag.ch</a>.</p>
+            </div>
         </div>
     </main>
 

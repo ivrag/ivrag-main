@@ -44,12 +44,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 '</table>'.
                                 '</body>'.
                                 '</html>';
+                
+                $emailPlain =   "Sehr geehrtes IVRAG - Team\n\n".
+                                "Soeben hat jemand übder das Internetformular eine Kontaktaufnahme geschickt!\n".
+                                "Hier die Angaben\n".
+                                "-----------------------\n".
+                                "Anrede: " . $title . "\n".
+                                "Name: " . $name . "\n".
+                                "Firma: " . $company . "\n".
+                                "Adresse: " . $address . "\n".
+                                "PLZ/Ort: " . $city . "\n".
+                                "E-Mail: " . $email . "\n".
+                                "Telefon: " . $phone . "\n\n".
+                                "Nachricht:\n".
+                                $message;
 
                 try {
                     $dotenv = Dotenv\Dotenv::createImmutable('../../');
                     $dotenv->load();
 
-                    $mail = new PHPMailer(true);
+                    $mail = new PHPMailer();
                     //Server settings
                     $mail->isSMTP();                                            //Send using SMTP
                     $mail->Host       = 'smtp-mail.outlook.com';                //Set the SMTP server to send through
@@ -69,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $mail->CharSet = 'UTF-8';
                     $mail->Subject = 'Internetanfrage - ' . $name;
                     $mail->Body    = $emailBody;
-                    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                    $mail->AltBody = $emailPlain;
 
                     if ($mail->send()) {
                         $rsp['status'] = true;
@@ -79,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
 
                 } catch (Exception $e) {
-                    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                    echo json_encode($rsp);
                 }
             } else {
                 $rsp['status'] = false;
