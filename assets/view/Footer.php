@@ -60,6 +60,14 @@
             $this->routes['impressum'] = '../impressum';
             $this->routes['privacy'] = '#';
             $this->routes['agb'] = '../agb';
+        } elseif ($this->dir === '404') {
+            $this->routes['home'] = '../home';
+            $this->routes['wohnung28'] = '../projects/wohnung28';
+            $this->routes['about'] = '../about';
+            $this->routes['contact'] = '../contact';
+            $this->routes['impressum'] = '../impressum';
+            $this->routes['privacy'] = '../privacy';
+            $this->routes['agb'] = '../agb';
         }
 
         $this->footer = '<footer class="pt-4 pb-4 mt-5 pt-md-5 border-top mb-0 container">
