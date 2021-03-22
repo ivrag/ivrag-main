@@ -6,6 +6,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+h1.pre {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .cs-nav-link {
     color: #696969 !important;
     text-decoration: none !important;
@@ -39,6 +44,15 @@ footer {
     font-size: .8em;
     background-color: #eeeeee;
     padding-bottom: 15px;
+}
+
+.cs-footer-link {
+    color: #385DCC;
+    transition: .3s;
+}
+
+.cs-footer-link:hover {
+    color: #223570;
 }
 
 @media (max-width: 780px) {

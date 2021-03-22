@@ -30,61 +30,23 @@
 
     <title>Über uns &bull; Immobilien Von Rehetobel AG</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php new Header($cd) ?>
 
     <main class="container mt-5">
         <div class="mb-5">
-            <h2>Über uns</h2>
-            <h5>Möblierte Ferienwohnungen für Freizeit und Business</h5>
-        </div>
-        <div class="row">
-            <div class="col-md-6 pt-2">
-                <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="https://www.wohnung28.ch/src/images/drone/md/drone_1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="https://www.wohnung28.ch/src/images/flat/md/flat_16.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="https://www.wohnung28.ch/src/images/drone/md/drone_1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 pt-1">
-                <p>Die Wohnung 28 ist ein Projekt der Firma Immobilien Von Rehetobel AG welches von einem jungen Team betrieben wird. Das Konzept hinter dem Projekt ist es Möblierte Wohnungen für Familien und Geschäftsreisende zur Verfügung zu stellen.</p>
-                <p>Durch die modernen und stylischen Einrichtungen unserer Wohnungen wird eine angenehme Atmosphäre geschafft. Alle Einrichtungen wurden mit viel Liebe zum Detail designt. Neben den Einrichtungen gibt es verschiedene Raumaccessoires, die Ihren Aufenthalt noch angenehmer gestalten.</p>
-                <p>Mit dem Projekt Wohnung 28 möchten wir unseren Kunden einen unvergesslichen Aufenthalt bieten, den Sie nie wieder vergessen werden.</p>
-                <p>Die staunenden Blicke und positive Rückmeldungen unserer Gäste motivieren uns, aus diesem Projekt etwas einzigartiges zu erschaffen.</p>
-            </div>
-        </div>
+            <h1>Über uns</h1>
+            <p>Sie suchen eine Wohnung, ein Einfamilienhaus, ein Mehrfamilienhaus, Ferienhaus oder Gewerbeobjekt zum mieten oder kaufen.</p>
+            <p>Würden gerne eine Immobilie verkaufen? Dann sind Sie bei uns richtig. Denn hinter dem Namen Immobilien Von Rehetobel AG steht ein motiviertes Team, welches kreativ und unkompliziert Anliegen und Probleme der Kundschaft verantwortungsvoll sowie lösungsorientiert angeht.</p>
 
-        <div class="mt-5 mb-3">
-            <h2>Frisch eingerichtete Wohnung</h2>
-            <h5>4.5 Zimmer Wohnung mit neuwertiger Möblierung</h5>
-        </div>
-        <div class="row">
-            <div class="col-md-6 pt-1">
-                <p>Gerne präsentieren wir Ihnen die neu eingerichtete 4.5 Zimmer Ferienwohnung, die in einem klassisch modernen Stil eingerichtet wurde und nun bereit ist Gäste zu empfangen.</p>
-            </div>
-            <div class="col-md-6 pt-2">
-                <img src="../lib/images/placeholder/placeholder.svg" class="d-block w-100" alt="...">
+            <div class="mt-5">
+                <p>Für unsere zukünftigen eigenen Projekte sind wir daran interessiert, über Bauland und Entwicklungsobjekte informiert zu werden. Ausserdem führen wir in unserem grosszügigen Kundenstamm solvente Interessenten für Bauland, Einfamilienhäuser, Eigentumswohnungen, Mehrfamilienhäuser und Gewerbeobjekte die laufend Investitionen im Immobilienbereich tätigen.</p>
+                <p>Sie haben ein Anlageobjekt, welches Sie einer fachmännischen Verwaltung übergeben möchten, um die Unterhaltskosten zu minimieren und so effizient wie nur möglich zu vermieten? Dann können wir Sie tatkräftig und fachmännisch unterstützen. Wir arbeiten wir sehr eng mit verschiedenen spezialisierten Firmen zusammen, um mit Ihrer Investition für Sie die grösstmöglichste Rendite zu erarbeiten.</p>
             </div>
         </div>
     </main>
 
-    <?php new Footer($cd) ?>
+    <div class="mt-auto"><?php new Footer($cd) ?></div>
 
     <!-- JQuery -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>

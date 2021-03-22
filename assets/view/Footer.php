@@ -69,29 +69,29 @@
                                     <ul class="list-unstyled">
                                         <li>Hauptstrasse 52</li>
                                         <li>8264 Eschenz</li>
-                                        <li class="mt-2"><a href="tel:0041765550015">+41 76 555 00 15</a></li>
-                                        <li class="mt-2"><a href="mailto:info@ivrag.ch">info@ivrag.ch</a></li>
+                                        <li class="mt-2"><a href="tel:0041765550015" class="cs-footer-link">+41 76 555 00 15</a></li>
+                                        <li class="mt-2"><a href="mailto:info@ivrag.ch" class="cs-footer-link">info@ivrag.ch</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-4">
                                     <h5>Navigation</h5>
                                     <ul class="list-unstyled">
-                                        <li><a href="' . $this->routes['home'] . '">Home</a></li>
+                                        <li><a href="' . $this->routes['home'] . '" class="cs-footer-link">Home</a></li>
                                         <li>
-                                            <a href="#" role="button" id="ivrag-projects-footer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projekte</a>
+                                            <a href="#" class="cs-footer-link" role="button" id="ivrag-projects-footer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projekte</a>
                                             <div class="dropdown-menu" aria-labelledby="ivrag-projects-footer">
-                                                <a class="dropdown-item" href="' . $this->routes['wohnung28'] . '"><small>Wohnung 28</small></a>
+                                                <a class="dropdown-item cs-footer-link" href="' . $this->routes['wohnung28'] . '"><small>Wohnung 28</small></a>
                                             </div>
                                         </li>
-                                        <li><a href="' . $this->routes['about'] . '">Über uns</a></li>
-                                        <li><a href="' . $this->routes['contact'] . '">Kontakt</a></li>
+                                        <li><a href="' . $this->routes['about'] . '" class="cs-footer-link">Über uns</a></li>
+                                        <li><a href="' . $this->routes['contact'] . '" class="cs-footer-link">Kontakt</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-4">
                                     <h5>Richtlinien</h5>
                                     <ul class="list-unstyled">
-                                        <li><a href="' . $this->routes['impressum'] . '">Impressum</a></li>
-                                        <li><a href="' . $this->routes['privacy'] . '">Datenschutz</a></li>
+                                        <li><a href="' . $this->routes['impressum'] . '" class="cs-footer-link">Impressum</a></li>
+                                        <li><a href="' . $this->routes['privacy'] . '" class="cs-footer-link">Datenschutz</a></li>
                                     </ul>
                                 </div>
                             </div>
