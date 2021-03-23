@@ -17,7 +17,7 @@
     <link rel="icon" type="image/svg+xml" href="../lib/favicon/favicon.svg" sizes="any">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="../lib/icns/css/icons.css">
+    <link rel="stylesheet" href="../lib/icns/css/icons.min.css">
 
     <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
@@ -127,7 +127,7 @@
     <!-- JQuery -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
-    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" async></script>
     <!-- xhr -->
     <script src="../assets/js/xhr/xhr.min.js"></script>
 
