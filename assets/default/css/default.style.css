@@ -11,6 +11,11 @@ h1.pre {
     font-weight: bold;
 }
 
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
 .cs-nav-link {
     color: #696969 !important;
     text-decoration: none !important;
