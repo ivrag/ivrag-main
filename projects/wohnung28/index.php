@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../../lib/icns/css/icons.css">
 
     <!-- Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -128,7 +128,7 @@
                                 <img src="../../lib/images/flats/29/flat_16.png" class="d-block w-100" alt="Wohnung 29 - Schlafzimmer mit Babybett">
                             </div>
                             <div class="carousel-item">
-                                <img src="../../lib/images/flats/29/flat_18.png" class="d-block w-100" alt="Wohnung 29 - Schlafzimmer">
+                                <img src="../../lib/images/flats/29/flat_17.png" class="d-block w-100" alt="Wohnung 29 - Schlafzimmer">
                             </div>
                             <div class="carousel-item">
                                 <img src="../../lib/images/flats/29/flat_15.png" class="d-block w-100" alt="Wohnung 29 - Badezimmer">

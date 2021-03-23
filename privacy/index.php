@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../lib/icns/css/icons.css">
 
     <!-- Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
