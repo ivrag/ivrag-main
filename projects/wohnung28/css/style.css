@@ -1,0 +1,9 @@
+.btn-airbnb {
+    text-decoration: none;
+    background: #4169e1;
+    border: 1px solid #314fac;
+}
+
+.btn-airbnb:hover {
+    background: #6678ad;
+}

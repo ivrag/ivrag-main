@@ -28,6 +28,8 @@
     <!-- Default -->
     <link rel="stylesheet" href="../../assets/default/css/default.style.css">
 
+    <link rel="stylesheet" href="./css/style.css">
+
     <title>Wohnung 28 &bull; Immobilien Von Rehetobel AG</title>
 </head>
 <body>
@@ -103,7 +105,7 @@
                 <p>Durch die 2 Lichtschächte im Gang und der Glasfront im Wohnzimmer erhält die Wohnung natürliches Licht von aussen und bietet somit mehr als genug Helligkeit.</p>
                 <p>Kunstwerke, Vasen und Bilder zieren die Wände und Räumlichkeiten. In den Schlafzimmern sorgen Kleiderdiener und Kleiderschränke für einen organisierten Start in den Tag.</p>
                 <p>Haben wir Ihr Interesse geweckt?</p>
-                <div><a href="https://www.airbnb.ch/rooms/43182277" class="btn btn-primary btn-md btn-block font-weight-bold" role="button" rel="noopener noreferrer" target="_blank">Besuchen Sie die Wohnung 28 jetzt auf Airbnb!</a></div>
+                <div><a href="https://www.airbnb.ch/rooms/43182277" class="btn btn-primary btn-md btn-block font-weight-bold btn-airbnb" role="button" rel="noopener noreferrer" target="_blank">Besuchen Sie die Wohnung 28 jetzt auf Airbnb!</a></div>
             </div>
         </div>
 
@@ -153,7 +155,7 @@
                 <p>Der grosszügige Balkon mit Blick auf die Burg Hohenklingen ist perfekt für ein entspanntes Glas Rotwein mit den Liebsten oder eine Tasse Kaffee in morgendlicher Atmosphäre.</p>
                 <p>Dank dem grosszugigen Raumverhältnis bietet die Wohnung Platz für bis zu 8 Personen.</p>
                 <p>Haben wir Ihr Interesse geweckt?</p>
-                <div><a href="https://www.airbnb.ch/rooms/45487943" class="btn btn-primary btn-md btn-block font-weight-bold" role="button" rel="noopener noreferrer" target="_blank">Besuchen Sie die Wohnung 29 jetzt auf Airbnb!</a></div>
+                <div><a href="https://www.airbnb.ch/rooms/45487943" class="btn btn-primary btn-md btn-block font-weight-bold btn-airbnb" role="button" rel="noopener noreferrer" target="_blank">Besuchen Sie die Wohnung 29 jetzt auf Airbnb!</a></div>
             </div>
         </div>
     </main>
