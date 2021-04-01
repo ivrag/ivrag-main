@@ -1,7 +1,23 @@
 <?php
     require '../assets/view/Header.php';
     require '../assets/view/Footer.php';
+    require_once "../config.php";
+    require_once ROOT."assets/php/autoload.php";
     $cd = basename($_SERVER['REQUEST_URI']);
+
+    $db = new DataController($_MainDB);
+    $id = NULL;
+    foreach ($db->read() as $key => $val) {
+        if ($val["name"] === "home") {
+            $id = $val["id"];
+            break;
+        }
+    }
+
+    $getData = $db->selectId($id)["contents"];
+    $raw = json_decode($getData, true);
+    $data = $raw["blocks"];
+    $imageData = array_splice($data, 0, 2);
 ?>
 
 <!DOCTYPE html>
@@ -49,16 +65,30 @@
                 </div>
             </div>
             <div class="col-md-6 pt-1">
-                <p>Unser letztes eigenes Projekt, das wir von der Marktanalyse, Projektentwicklung, Baureife, Finanzierung, Bau, Erstvermietung ab September 2019 bis zur Verwaltung begleiten:</p>
-                <p><strong>Wohnpark Eschenz mit 33 Wohnungen (2,5 - 5,5 Zi.-WG.) und einem Therapiezentrum</strong></p>
+                <?php
+                    foreach ($imageData as $key => $val) {
+                        if ($val["type"] == "paragraph") {
+                            echo "<p>" . $val["data"]["text"] . "</p>";
+                        }
+                        if ($val["type"] == "list") {
+                            foreach ($val["data"]["items"] as $value) {
+                                echo "<p><strong>" . $value["content"] . "</strong></p>";
+                            }
+                        }
+                    }
+                ?>
             </div>
         </div>
 
         <div class="mt-5">
-            <p>Die Immobilien Von Rehetobel AG ist Ihre Adresse für Ihre Bedürfnisse im Immobilienbereich!</p>
-            <p>Wir kümmern uns beim Verkauf, Kauf, Verwaltung, Bewirtschaftung und Vermietung um Ihre Liegenschaft/ -en als seien diese unsere eigenen Objekte!</p>
+            <?php
+                foreach ($data as $key => $val) {
+                    if ($val["type"] == "paragraph") {
+                        echo "<p>" . $val["data"]["text"] . "</p>";
+                    }
+                }
+            ?>
         </div>
-
     </main>
 
     <?php new Footer($cd) ?>

@@ -1,7 +1,22 @@
 <?php
     require '../assets/view/Header.php';
     require '../assets/view/Footer.php';
+    require_once "../config.php";
+    require_once ROOT."assets/php/autoload.php";
     $cd = basename($_SERVER['REQUEST_URI']);
+
+    $db = new DataController($_MainDB);
+    $id = NULL;
+    foreach ($db->read() as $key => $val) {
+        if ($val["name"] === "about") {
+            $id = $val["id"];
+            break;
+        }
+    }
+
+    $getData = $db->selectId($id)["contents"];
+    $raw = json_decode($getData, true);
+    $data = $raw["blocks"];
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +50,15 @@
 
     <main class="container mt-5">
         <div class="mb-5">
-            <h1>Über uns</h1>
-            <p>Sie suchen eine Wohnung, ein Einfamilienhaus, ein Mehrfamilienhaus, Ferienhaus oder Gewerbeobjekt zum mieten oder kaufen.</p>
-            <p>Würden gerne eine Immobilie verkaufen? Dann sind Sie bei uns richtig. Denn hinter dem Namen Immobilien Von Rehetobel AG steht ein motiviertes Team, welches kreativ und unkompliziert Anliegen und Probleme der Kundschaft verantwortungsvoll sowie lösungsorientiert angeht.</p>
-
-            <div class="mt-5">
-                <p>Für unsere zukünftigen eigenen Projekte sind wir daran interessiert, über Bauland und Entwicklungsobjekte informiert zu werden. Ausserdem führen wir in unserem grosszügigen Kundenstamm solvente Interessenten für Bauland, Einfamilienhäuser, Eigentumswohnungen, Mehrfamilienhäuser und Gewerbeobjekte die laufend Investitionen im Immobilienbereich tätigen.</p>
-                <p>Sie haben ein Anlageobjekt, welches Sie einer fachmännischen Verwaltung übergeben möchten, um die Unterhaltskosten zu minimieren und so effizient wie nur möglich zu vermieten? Dann können wir Sie tatkräftig und fachmännisch unterstützen. Wir arbeiten wir sehr eng mit verschiedenen spezialisierten Firmen zusammen, um mit Ihrer Investition für Sie die grösstmöglichste Rendite zu erarbeiten.</p>
-            </div>
+            <?php
+                foreach ($data as $val) {
+                    if ($val["type"] == "header") {
+                        echo '<h2>' . $val["data"]["text"] . "</h2>";
+                    } elseif ($val["type"] == "paragraph") {
+                        echo "<p>" . $val["data"]["text"] . "</p>";
+                    }
+                }
+            ?>
         </div>
     </main>
 
