@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-6 pt-1">
                 <?php
-                    foreach ($imageData as $key => $val) {
+                    foreach ($imageData as $val) {
                         if ($val["type"] == "paragraph") {
                             echo "<p>" . $val["data"]["text"] . "</p>";
                         }
