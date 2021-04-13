@@ -7,7 +7,7 @@
 
     $db = new DataController($_MainDB);
     $id = NULL;
-    foreach ($db->read() as $key => $val) {
+    foreach ($db->read() as $val) {
         if ($val["name"] === "home") {
             $id = $val["id"];
             break;
@@ -17,7 +17,7 @@
     $getData = $db->selectId($id)["contents"];
     $raw = json_decode($getData, true);
     $data = $raw["blocks"];
-    $imageData = array_splice($data, 0, 2);
+    $main_headers = array_splice($data, 0, 2);
 ?>
 
 <!DOCTYPE html>
@@ -51,44 +51,56 @@
 
     <main class="container mt-5">
         <div class="mb-5">
-            <h1 class="pre">Herzlich willkommen bei der:</h1>
-            <h1>Immobilien Von Rehetobel AG</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-6 pt-2">
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../lib/images/drone/drone.png" class="d-block w-100" alt="Drohnenaufnahme">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 pt-1">
-                <?php
-                    foreach ($imageData as $val) {
-                        if ($val["type"] == "paragraph") {
-                            echo "<p>" . $val["data"]["text"] . "</p>";
-                        }
-                        if ($val["type"] == "list") {
-                            foreach ($val["data"]["items"] as $value) {
-                                echo "<p><strong>" . $value["content"] . "</strong></p>";
-                            }
-                        }
-                    }
-                ?>
-            </div>
-        </div>
-
-        <div class="mt-5">
             <?php
-                foreach ($data as $key => $val) {
-                    if ($val["type"] == "paragraph") {
-                        echo "<p>" . $val["data"]["text"] . "</p>";
-                    }
-                }
+                echo '<h1 class="pre">' . $main_headers[0]["data"]["text"] . '</h1>';
+                echo '<h1>' . $main_headers[1]["data"]["text"] . '</h1>';
             ?>
         </div>
+        
+        <?php
+            foreach ($data as $val) {
+                if ($val["type"] == "image") {
+                    echo '<div class="row mb-5">
+                            <div class="col-md-6 pt-2">
+                                <div class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="' . $val["data"]["file"]["url"] . '" class="d-block w-100" alt="Drohnenaufnahme">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pt-1">
+                                ' . $val["data"]["caption"] . '
+                            </div>
+                        </div>';
+                } else if($val["type"] == "header") {
+                    if ($val["data"]["level"] == "1") {
+                        echo '<div class="mt-5">
+                            <h1>' . $val["data"]["text"] . '</h1>
+                        </div>';
+                    } else if ($val["data"]["level"] == "2") {
+                        echo '<div class="mt-5">
+                            <h2>' . $val["data"]["text"] . '</h2>
+                        </div>';
+                    } else if ($val["data"]["level"] == "3") {
+                        echo '<div class="mt-5">
+                            <h3>' . $val["data"]["text"] . '</h3>
+                        </div>';
+                    } else if ($val["data"]["level"] == "4") {
+                        echo '<div class="mt-5">
+                            <h4>' . $val["data"]["text"] . '</h4>
+                        </div>';
+                    } else if ($val["data"]["level"] == "5") {
+                        echo '<div class="mt-5">
+                            <h5>' . $val["data"]["text"] . '</h5>
+                        </div>';
+                    }
+                } else if($val["type"] == "paragraph") {
+                    echo '<p>' . $val["data"]["text"] . '</p>';
+                }
+            }
+        ?>
     </main>
 
     <?php new Footer($cd) ?>
