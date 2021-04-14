@@ -98,6 +98,8 @@
                     }
                 } else if($val["type"] == "paragraph") {
                     echo '<p>' . $val["data"]["text"] . '</p>';
+                } else if ($val["type"] == "raw") {
+                    echo $val["data"]["html"];
                 }
             }
         ?>

@@ -1,7 +1,22 @@
 <?php
     require '../assets/view/Header.php';
     require '../assets/view/Footer.php';
+    require_once "../config.php";
+    require_once ROOT."assets/php/autoload.php";
     $cd = basename($_SERVER['REQUEST_URI']);
+
+    $db = new DataController($_MainDB);
+    $id = NULL;
+    foreach ($db->read() as $val) {
+        if ($val["name"] === "contact") {
+            $id = $val["id"];
+            break;
+        }
+    }
+
+    $getData = $db->selectId($id)["contents"];
+    $raw = json_decode($getData, true);
+    $data = $raw["blocks"];
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +57,52 @@
                 <img src="../lib/logo/logo-gray.svg" class="card-img-top" alt="Immobilien Von Rehetobel AG Logo">
                 <div class="card-body">
                     <div class="card-text">
-                        <div><strong>Immobilien Von Rehetobel AG</strong></div>
-                        <div>Hauptstrasse 52</div>
-                        <div>8264 Eschenz</div>
-                        <div class="mt-1"><a href="tel:0041765550015">+41 76 555 00 15</a></div>
-                        <div class="mt-1"><a href="mailto:info@ivrag.ch">info@ivrag.ch</a></div>
+                    <?php
+                        foreach ($data as $val) {
+                            if ($val["type"] == "image") {
+                                echo '<div class="row mb-5">
+                                        <div class="col-md-6 pt-2">
+                                            <div class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="' . $val["data"]["file"]["url"] . '" class="d-block w-100" alt="Drohnenaufnahme">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pt-1">
+                                            ' . $val["data"]["caption"] . '
+                                        </div>
+                                    </div>';
+                            } else if($val["type"] == "header") {
+                                if ($val["data"]["level"] == "1") {
+                                    echo '<div class="mt-5">
+                                        <h1>' . $val["data"]["text"] . '</h1>
+                                    </div>';
+                                } else if ($val["data"]["level"] == "2") {
+                                    echo '<div class="mt-5">
+                                        <h2>' . $val["data"]["text"] . '</h2>
+                                    </div>';
+                                } else if ($val["data"]["level"] == "3") {
+                                    echo '<div class="mt-5">
+                                        <h3>' . $val["data"]["text"] . '</h3>
+                                    </div>';
+                                } else if ($val["data"]["level"] == "4") {
+                                    echo '<div class="mt-5">
+                                        <h4>' . $val["data"]["text"] . '</h4>
+                                    </div>';
+                                } else if ($val["data"]["level"] == "5") {
+                                    echo '<div class="mt-5">
+                                        <h5>' . $val["data"]["text"] . '</h5>
+                                    </div>';
+                                }
+                            } else if($val["type"] == "paragraph") {
+                                echo '<p>' . $val["data"]["text"] . '</p>';
+                            } else if ($val["type"] == "raw") {
+                                echo $val["data"]["html"];
+                            }
+                        }
+                    ?>
                     </div>
                 </div>
             </div>

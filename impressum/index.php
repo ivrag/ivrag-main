@@ -1,7 +1,22 @@
 <?php
     require '../assets/view/Header.php';
     require '../assets/view/Footer.php';
+    require_once "../config.php";
+    require_once ROOT."assets/php/autoload.php";
     $cd = basename($_SERVER['REQUEST_URI']);
+
+    $db = new DataController($_MainDB);
+    $id = NULL;
+    foreach ($db->read() as $val) {
+        if ($val["name"] === "impressum") {
+            $id = $val["id"];
+            break;
+        }
+    }
+
+    $getData = $db->selectId($id)["contents"];
+    $raw = json_decode($getData, true);
+    $data = $raw["blocks"];
 ?>
 
 <!DOCTYPE html>
@@ -34,40 +49,52 @@
     <?php new Header($cd) ?>
 
     <main class="container mt-5">
-        <div class="mb-5">
-            <h2>Impressum</h2>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-sm-6 mb-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Anschrift</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Immobilien Von Rehetobel AG</h6>
-                        <div class="card-text">
-                            <div>Hauptstrasse 52</div>
-                            <div>8264 Eschenz</div>
-                            <div><a href="mailto:info@ivrag.ch">info@ivrag.ch</a></div>
-                            <div><a href="tel:0041525550015">+41 52 555 00 15</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Domizil</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Immobilien Von Rehetobel AG</h6>
-                        <div class="card-text">
-                            <div>Bälisteigstrasse 2</div>
-                            <div>8264 Eschenz</div>
-                            <div><a href="mailto:info@ivrag.ch">info@ivrag.ch</a></div>
-                            <div><a href="tel:0041525550015">+41 52 555 00 15</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <?php
+                    foreach ($data as $val) {
+                        if ($val["type"] == "image") {
+                            echo '<div class="row mb-5">
+                                    <div class="col-md-6 pt-2">
+                                        <div class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="' . $val["data"]["file"]["url"] . '" class="d-block w-100" alt="Drohnenaufnahme">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pt-1">
+                                        ' . $val["data"]["caption"] . '
+                                    </div>
+                                </div>';
+                        } else if($val["type"] == "header") {
+                            if ($val["data"]["level"] == "1") {
+                                echo '<div class="mt-5">
+                                    <h1>' . $val["data"]["text"] . '</h1>
+                                </div>';
+                            } else if ($val["data"]["level"] == "2") {
+                                echo '<div class="mt-5">
+                                    <h2>' . $val["data"]["text"] . '</h2>
+                                </div>';
+                            } else if ($val["data"]["level"] == "3") {
+                                echo '<div class="mt-5">
+                                    <h3>' . $val["data"]["text"] . '</h3>
+                                </div>';
+                            } else if ($val["data"]["level"] == "4") {
+                                echo '<div class="mt-5">
+                                    <h4>' . $val["data"]["text"] . '</h4>
+                                </div>';
+                            } else if ($val["data"]["level"] == "5") {
+                                echo '<div class="mt-5">
+                                    <h5>' . $val["data"]["text"] . '</h5>
+                                </div>';
+                            }
+                        } else if($val["type"] == "paragraph") {
+                            echo '<p>' . $val["data"]["text"] . '</p>';
+                        } else if ($val["type"] == "raw") {
+                            echo $val["data"]["html"];
+                        }
+                    }
+                ?>
     </main>
 
     <div class="mt-auto"><?php new Footer($cd) ?></div> <!-- wrap footer into div so it can be placed at the bottom -->
