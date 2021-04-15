@@ -92,6 +92,29 @@
                     echo '<p>' . $val["data"]["text"] . '</p>';
                 } else if ($val["type"] == "raw") {
                     echo $val["data"]["html"];
+                } else if ($val["type"] == "list") {
+                    if (count($val["data"]["items"]) > 50) {
+                        $htmStr = '<div class="row">';
+                        foreach ($val["data"]["items"] as $item) {
+                            $htmStr .= '<div class="col-sm-4">' . $item["content"] . '</div>';
+                        }
+                        $htmStr .= "</div>";
+                        echo $htmStr;
+                    } else {
+                        if ($val["data"]["style"] == "unordered") {
+                            echo '<ul>';
+                            foreach ($val["data"]["items"] as $item) {
+                                echo "<li>" . $item["content"] . "</li>";
+                            }
+                            echo '</ul>';
+                        } else {
+                            echo '<ol>';
+                            foreach ($val["data"]["items"] as $item) {
+                                echo "<li>" . $item["content"] . "</li>";
+                            }
+                            echo '</ol>';
+                        }
+                    }
                 }
             }
         ?>
