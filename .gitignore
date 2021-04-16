@@ -1,4 +1,6 @@
 .env
+robots.txt
+sitemap.xml
 vendor/
 node_modules/
 .DS_Store
