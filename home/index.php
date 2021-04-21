@@ -39,7 +39,6 @@
     <meta name="keywords" content="<?php echo $keywordStr ?>">
     <meta name="description" content="Immobilien Von Rehetobel AG, Immobilienunternehmen, Immobilienfirma">
     <meta name="author" content="Immobilien Von Rehetobel AG">
-    <meta name="google-site-verification" content="eqj9LdQZJa7xeJFq9KTTEEj4se_l2B80K4QinQV46fQ" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../lib/favicon/favicon.svg" sizes="any">
