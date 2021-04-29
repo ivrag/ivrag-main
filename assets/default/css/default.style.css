@@ -60,6 +60,12 @@ footer {
     color: #223570;
 }
 
+@media (max-width: 955px) {
+    .company-logo {
+        width: 300px;
+    }
+}
+
 @media (max-width: 780px) {
     header {
         font-size: .9em;
@@ -79,5 +85,8 @@ footer {
     }
     nav a {
         white-space: nowrap;
+    }
+    footer {
+        width: 100%;
     }
 }

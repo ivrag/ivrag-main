@@ -64,7 +64,7 @@
 
         $this->footer = '<footer class="pt-4 pb-4 mt-5 pt-md-5 border-top mb-0 container">
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <h5>Immobilien Von Rehetobel AG</h5>
                                     <ul class="list-unstyled">
                                         <li>Hauptstrasse 52</li>
@@ -73,7 +73,7 @@
                                         <li class="mt-2"><a href="mailto:info@ivrag.ch" class="cs-footer-link">info@ivrag.ch</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <h5>Navigation</h5>
                                     <ul class="list-unstyled">
                                         <li><a href="' . $this->routes['home'] . '" class="cs-footer-link">Home</a></li>
@@ -87,7 +87,7 @@
                                         <li><a href="' . $this->routes['contact'] . '" class="cs-footer-link">Kontakt</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <h5>Richtlinien</h5>
                                     <ul class="list-unstyled">
                                         <li><a href="' . $this->routes['impressum'] . '" class="cs-footer-link">Impressum</a></li>
