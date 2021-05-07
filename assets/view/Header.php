@@ -15,51 +15,73 @@
     private function setRoutes() {
         if ($this->dir === 'home') {
             $this->routes['home'] = '#';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '../contact';
 
             $this->actives['home'] = '-active';
+            $this->actives['offers'] = '';
+            $this->actives['wohnung28'] = '';
+            $this->actives['about'] = '';
+            $this->actives['contact'] = '';
+        } elseif ($this->dir === 'offers') {
+            $this->routes['home'] = '../home';
+            $this->routes['offers'] = '#';
+            $this->routes['wohnung28'] = '../projects/wohnung28';
+            $this->routes['about'] = '../about';
+            $this->routes['contact'] = '../contact';
+
+            $this->actives['home'] = '';
+            $this->actives['offers'] = '-active';
             $this->actives['wohnung28'] = '';
             $this->actives['about'] = '';
             $this->actives['contact'] = '';
         } elseif ($this->dir === 'wohnung28') {
             $this->routes['home'] = '../../home';
+            $this->routes['offers'] = '../../offers';
             $this->routes['wohnung28'] = '#';
             $this->routes['about'] = '../../about';
             $this->routes['contact'] = '../../contact';
 
             $this->actives['home'] = '';
+            $this->actives['offers'] = '';
             $this->actives['wohnung28'] = '-active';
             $this->actives['about'] = '';
             $this->actives['contact'] = '';
         } elseif ($this->dir === 'about') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '#';
             $this->routes['contact'] = '../contact';
 
             $this->actives['home'] = '';
+            $this->actives['offers'] = '';
             $this->actives['wohnung28'] = '';
             $this->actives['about'] = '-active';
             $this->actives['contact'] = '';
         } elseif ($this->dir === 'contact') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '#';
 
             $this->actives['home'] = '';
+            $this->actives['offers'] = '';
             $this->actives['wohnung28'] = '';
             $this->actives['about'] = '';
             $this->actives['contact'] = '-active';
         } elseif ($this->dir === 'impressum' || $this->dir === 'privacy') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '../contact';
 
             $this->actives['home'] = '';
+            $this->actives['offers'] = '';
             $this->actives['wohnung28'] = '';
             $this->actives['about'] = '';
             $this->actives['contact'] = '';
@@ -75,6 +97,7 @@
                                 </a>
                                 <nav class="my-2 my-md-0 mr-md-5">
                                     <a href="' . $this->routes['home'] . '" class="p-2 cs-nav-link' . $this->actives['home'] . '">Home</a>
+                                    <a href="' . $this->routes['offers'] . '" class="p-2 cs-nav-link' . $this->actives['offers'] . '">Angebote</a>
                                     <a href="#" class="p-2 cs-nav-link' . $this->actives['wohnung28'] . ' dropdown-toggle" id="ivrag-projects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projekte</a>
                                     <div class="dropdown-menu" aria-labelledby="ivrag-projects">
                                         <a class="dropdown-item" href="' . $this->routes['wohnung28'] . '">Wohnung 28</a>

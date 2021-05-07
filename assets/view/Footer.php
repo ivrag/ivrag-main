@@ -14,6 +14,16 @@
     private function setRoutes() {
         if ($this->dir === 'home') {
             $this->routes['home'] = '#';
+            $this->routes['offers'] = '../offers';
+            $this->routes['wohnung28'] = '../projects/wohnung28';
+            $this->routes['about'] = '../about';
+            $this->routes['contact'] = '../contact';
+            $this->routes['impressum'] = '../impressum';
+            $this->routes['privacy'] = '../privacy';
+            $this->routes['agb'] = '../agb';
+        } elseif ($this->dir === 'offers') {
+            $this->routes['home'] = '../home';
+            $this->routes['offers'] = '#';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '../contact';
@@ -22,6 +32,7 @@
             $this->routes['agb'] = '../agb';
         } elseif ($this->dir === 'wohnung28') {
             $this->routes['home'] = '../../home';
+            $this->routes['offers'] = '../../offers';
             $this->routes['wohnung28'] = '#';
             $this->routes['about'] = '../../about';
             $this->routes['contact'] = '../../contact';
@@ -30,6 +41,7 @@
             $this->routes['agb'] = '../../agb';
         } elseif ($this->dir === 'about') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '#';
             $this->routes['contact'] = '../contact';
@@ -38,6 +50,7 @@
             $this->routes['agb'] = '../agb';
         } elseif ($this->dir === 'contact') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '#';
@@ -46,6 +59,7 @@
             $this->routes['agb'] = '../agb';
         } elseif ($this->dir === 'impressum') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '../contact';
@@ -54,6 +68,7 @@
             $this->routes['agb'] = '../agb';
         } elseif ($this->dir === 'privacy') {
             $this->routes['home'] = '../home';
+            $this->routes['offers'] = '../offers';
             $this->routes['wohnung28'] = '../projects/wohnung28';
             $this->routes['about'] = '../about';
             $this->routes['contact'] = '../contact';
@@ -77,6 +92,7 @@
                                     <h5>Navigation</h5>
                                     <ul class="list-unstyled">
                                         <li><a href="' . $this->routes['home'] . '" class="cs-footer-link">Home</a></li>
+                                        <li><a href="' . $this->routes['offers'] . '" class="cs-footer-link">Angebote</a></li>
                                         <li>
                                             <a href="#" class="cs-footer-link" role="button" id="ivrag-projects-footer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projekte</a>
                                             <div class="dropdown-menu" aria-labelledby="ivrag-projects-footer">
