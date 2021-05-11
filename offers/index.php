@@ -17,7 +17,6 @@
     $getData = $db->selectId($id)["contents"];
     $raw = json_decode($getData, true);
     $data = $raw["blocks"];
-    $main_headers = array_splice($data, 0, 2);
 
     $raw_keywords = $db->selectId($id)["keywords"];
     $keywords = json_decode($raw_keywords, true);
@@ -101,7 +100,7 @@
                     }
                 } else if($val["type"] == "paragraph") {
                     echo '<p>' . $val["data"]["text"] . '</p>';
-                } else if ($val["type"] == "raw") {
+                } else if ($val["type"] === "raw") {
                     echo $val["data"]["html"];
                 }
             }
