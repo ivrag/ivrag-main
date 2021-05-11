@@ -17,6 +17,18 @@
     $getData = $db->selectId($id)["contents"];
     $raw = json_decode($getData, true);
     $data = $raw["blocks"];
+    $main_headers = array_splice($data, 0, 2);
+
+    $raw_keywords = $db->selectId($id)["keywords"];
+    $keywords = json_decode($raw_keywords, true);
+    $keywordStr = "";
+    for ($i = 0; $i < count($keywords); $i++) {
+        if ($i != count($keywords) -1) {
+            $keywordStr .= $keywords[$i]["value"] . ", ";
+        } else {
+            $keywordStr .= $keywords[$i]["value"];
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="de">
